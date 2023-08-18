@@ -1,0 +1,37 @@
+# https://pictogrammers.com/library/mdi/
+
+BoxLayout:
+    orientation: 'vertical'
+    
+    ScreenManager:
+        id: screen_manager
+        Screen1:
+            name: 'screen1'
+        Screen2:
+            name: 'screen2'
+        Screen3:
+            name: 'screen3'
+
+    MDBottomNavigation:
+        panel_color: .2, .2, .2, 1
+
+        MDBottomNavigationItem:
+            name: 'screen1'
+            text: 'Screen 1'
+            #icon: 'assets/icon1.png'
+            icon: 'account'
+            on_tab_release: screen_manager.current = 'screen1'
+        
+        MDBottomNavigationItem:
+            name: 'screen2'
+            text: 'Screen 2'
+            #icon: 'assets/icon2.png'
+            icon: 'cloud'
+            on_tab_release: screen_manager.current = 'screen2'
+        
+        MDBottomNavigationItem:
+            name: 'screen3'
+            text: 'Screen 3'
+            #icon: 'assets/icon3.png'
+            icon: 'arrow-all'   
+            on_tab_release: screen_manager.current = 'screen3'
