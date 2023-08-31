@@ -1,0 +1,16 @@
+# screen1.kv
+<Screen1>:
+    name: "screen1"
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Screen 1"
+            font_size: 32
+        MDFillRoundFlatIconButton:
+            icon: "language-python"
+            text: "Screen2"
+            #line_color: 0, 0, 0, 0
+            #md_bg_color: 1, 0.5, 0, 1  # Set the background color to orange (RGBA)
+            pos_hint: {"center_x": .5, "center_y": .5}
+            #on_release: app.root.current = 'screen2'
+            on_release: screen_manager.current = 'screen2'

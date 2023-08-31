@@ -3,6 +3,9 @@ https://github.com/kivymd/KivyMD/wiki/Modules-Material-App
 https://github.com/kivymd/KivyMD
 https://kivymd.readthedocs.io/en/latest/
 
+### Icons
+https://pictogrammers.com/library/mdi/
+
 ### Install
 pip install kivymd==1.1.1
 

@@ -1,0 +1,16 @@
+<Screen2>:
+    name: 'screen2'
+    MDLabel:
+        id: screen2_label
+        text: 'Screen2'
+        font_size: 18
+        halign: 'center'
+    MDScrollView:
+        MDList:
+            id: scroll2
+    MDRaisedButton:
+        icon: "arrow-right-bold"
+        text: 'Screen1'
+        font_size: 18
+        pos_hint: {'center_x':0.5,'center_y':0.1}
+        on_press: root.manager.current = 'screen1'         
