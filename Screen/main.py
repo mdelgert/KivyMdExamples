@@ -24,6 +24,7 @@ class MainApp(MDApp):
     def build(self):
         self.theme_cls.material_style = "M2"
         self.theme_cls.theme_style = "Dark"
-        return Builder.load_file("main.kv")
+        # Not needed will load from main.kv and cause double firing of events
+        #return Builder.load_file("main.kv")
 
 MainApp().run()
