@@ -1,4 +1,5 @@
-from kivy.app import App
+#from kivy.app import App
+from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 
@@ -12,7 +13,7 @@ class SettingsScreen(Screen):
         print("Settings pre enter")
         self.ids.settings_label.text = 'Settings screen text updated.'         
 
-class MyApp(App):
+class MyApp(MDApp):
     def build(self):
         self.sm = ScreenManager()
         self.sm.add_widget(MainScreen(name='main'))
