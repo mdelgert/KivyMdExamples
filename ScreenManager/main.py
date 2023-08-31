@@ -1,6 +1,7 @@
 #from kivy.app import App
 from kivymd.app import MDApp
 from kivy.lang import Builder
+from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivymd.uix.list import OneLineListItem
 
@@ -13,7 +14,7 @@ class Screen1(Screen):
                 self.ids.scroll1.add_widget(
                     OneLineListItem(text=f"Single-line item {i}")
                 )
-                                
+
         except:
             print('Screen2: on_pre_enter: error')   
 
@@ -36,14 +37,25 @@ class Screen2(Screen):
     def on_enter(self):
         print("Screen2: on_enter")
 
+class RootWidget(BoxLayout):
+    pass
+
 class MyApp(MDApp):
     def build(self):
-        sm = ScreenManager()
-        sm.add_widget(Screen1(name='screen1'))
-        sm.add_widget(Screen2(name='screen2'))
-        return sm
+        self.title = 'Screen Manager'
+
+        # Pre events works with this method
+        # sm = ScreenManager()
+        # sm.add_widget(Screen1(name='screen1'))
+        # sm.add_widget(Screen2(name='screen2'))
+        # return sm
+
+        # Pre events does not works with this method
+        layout = RootWidget()
+        return layout
 
 if __name__ == '__main__':
+    Builder.load_file('root.kv')
     Builder.load_file('screen1.kv')
     Builder.load_file('screen2.kv')
     MyApp().run()

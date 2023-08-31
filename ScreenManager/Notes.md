@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/32553320/on-enter-firing-before-screen-is-entered-when-using-nested-screenmanager-in-kivy
+https://www.reddit.com/r/kivy/comments/160guv3/on_enter_not_working_on_starting_screen_of_app/
