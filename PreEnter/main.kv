@@ -1,0 +1,13 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            id: main_label
+            text: "Main Screen"
+            font_size: 32
+        Button:
+            text: 'Settings'
+            size_hint: None, None
+            on_release: 
+                app.root.current = 'settings'
+                app.settings_screen_opened()  # Call the function to print the message

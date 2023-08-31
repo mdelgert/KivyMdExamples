@@ -1,0 +1,12 @@
+<SettingsScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            id: settings_label
+            text: "Settings Screen"
+            font_size: 32        
+        Button:
+            text: 'Main'
+            size_hint: None, None
+            on_release: app.root.current = 'main'
+
