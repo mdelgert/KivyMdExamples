@@ -1,0 +1,16 @@
+<MyBoxLayout>:
+    orientation: 'vertical'
+    padding: 10
+
+    Label:
+        text: "Slider Value: {}".format(int(slider.value))
+        size_hint: 1, 0.2
+
+    Slider:
+        id: slider
+        min: 0
+        max: 100
+        value: 50
+        size_hint: 1, 0.6
+        
+
