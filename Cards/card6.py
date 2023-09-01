@@ -7,13 +7,16 @@ from kivymd.uix.button import MDIconButton
 
 KV = '''
 MDFloatLayout:
-    # MDLabel:
-    #     id: label0
-    #     halign: 'center'
-    #     markup: True
-    #     text: "Cards"
-    #     pos_hint: {'y': .45}
-    
+    MDLabel:
+        id: label0
+        halign: 'center'
+        markup: True
+        text: "Cards"
+        pos_hint: {'y': .35}
+        theme_text_color: "Custom"
+        text_color: "orange"
+        font_style: "H1"
+
     MDCard:
 		orientation: "vertical"
 		padding: "8dp"
@@ -22,8 +25,9 @@ MDFloatLayout:
 		pos_hint: {"center_x": .5, "center_y": .5}
 		MDLabel:
 			text: "Line1"
+            
 		MDLabel:
-			text: "Line2"            
+			text: "Line2"           
 '''
 class MyApp(MDApp):
     def build(self):
