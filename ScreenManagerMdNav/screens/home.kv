@@ -1,0 +1,14 @@
+# home.kv
+<Home>:
+    name: "home"
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Home"
+            font_size: 32
+        MDFillRoundFlatIconButton:
+            icon: "language-python"
+            text: "Pop Screen"
+            pos_hint: {"center_x": .5, "center_y": .5}
+            on_release: root.show_popup()
+

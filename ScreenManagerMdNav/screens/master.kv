@@ -1,0 +1,32 @@
+# https://pictogrammers.com/library/mdi/
+<Master>:
+    orientation: 'vertical'
+    ScreenManager:
+        id: screen_manager
+        Home:
+            name: 'home'
+        About:
+            name: 'about'
+        Contact:
+            name: 'contact'
+
+    MDBottomNavigation:
+        panel_color: .2, .2, .2, 1
+
+        MDBottomNavigationItem:
+            name: 'home'
+            text: 'Home'
+            icon: 'home'
+            on_tab_release: screen_manager.current = 'home'
+            
+        MDBottomNavigationItem:
+            name: 'about'
+            text: 'About'
+            icon: 'information'
+            on_tab_release: screen_manager.current = 'about'
+            
+        MDBottomNavigationItem:
+            name: 'contact'
+            text: 'Contact'
+            icon: 'account-box-outline'   
+            on_tab_release: screen_manager.current = 'contact'

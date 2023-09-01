@@ -1,0 +1,29 @@
+<MyPopup>:
+    title: 'Pop!'
+    background_color: 0, 0, 0, 1  # Set the background color to black (RGBA)
+
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: '10dp'
+        padding: '10dp'
+
+        Label:
+            id: pop_label
+            text: ''
+            font_size: 32    
+        
+        MDFillRoundFlatIconButton:
+            icon: "language-python"
+            text: "Click Me"
+            line_color: 0, 0, 0, 0
+            #md_bg_color: 1, 0.5, 0, 1
+            pos_hint: {"center_x": .5, "center_y": .5}
+            on_release: root.btn_hello()
+
+        MDFillRoundFlatIconButton:
+            icon: "party-popper"
+            text: "Close"
+            line_color: 0, 0, 0, 0
+            #md_bg_color: 1, 0.5, 0, 1
+            pos_hint: {"center_x": .5, "center_y": .5}
+            on_release: root.dismiss_popup()  # Call the dismiss_popup method
