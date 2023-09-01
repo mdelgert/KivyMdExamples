@@ -6,26 +6,10 @@
         font_size: 18
         halign: 'center'
 
-    # MDScrollView:
-    #     MDList:
-    #         id: scroll1
-
-    MDCard:
-        orientation: "vertical"
-        padding: "8dp"
-        size_hint: None, None
-        size: "280dp", "180dp"
-        md_bg_color: "#FFA500"
-        pos_hint: {"center_x": .5, "center_y": .5}
-
-        MDIconButton:
-            icon: "dots-vertical"
-            pos_hint: {"top": 1, "right": 1}
-        MDLabel:
-            text: "Hello World"
-            size_hint_y: None
-            height: self.texture_size[1]
-
+    ScrollView:
+        BoxLayout:
+            orientation: 'vertical'
+            id: card_container
 
     MDRaisedButton:
         icon: "arrow-right-bold"
