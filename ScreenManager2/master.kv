@@ -1,0 +1,32 @@
+<MasterLayout>:
+    BoxLayout:
+        orientation: "vertical"
+
+        BoxLayout:
+            size_hint_y: None
+            height: "50dp"
+            Label:
+                text: "Header"
+                font_size: 20
+
+        ScreenManager:
+            id: screen_manager
+            Screen1:
+                name: "screen1"
+            Screen2:
+                name: "screen2"
+            Screen3:
+                name: "screen3"
+
+        BoxLayout:
+            size_hint_y: None
+            height: "50dp"
+            Button:
+                text: "Screen 1"
+                on_release: screen_manager.current = "screen1"
+            Button:
+                text: "Screen 2"
+                on_release: screen_manager.current = "screen2"
+            Button:
+                text: "Screen 3"
+                on_release: screen_manager.current = "screen3"
