@@ -2,6 +2,10 @@
 https://github.com/kivymd/KivyMD/wiki/Modules-Material-App
 https://github.com/kivymd/KivyMD
 https://kivymd.readthedocs.io/en/latest/
+https://github.com/flatplanet/kivyMD
+
+### Cards
+https://kivycoder.com/how-to-teach-yourself-kivymd-quickly-python-kivy-gui-tutorial-41/
 
 ### Icons
 https://pictogrammers.com/library/mdi/
