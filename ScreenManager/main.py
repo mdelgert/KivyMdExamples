@@ -15,15 +15,15 @@ Builder.load_file('screen2.kv')
 class Screen1(Screen):
     def on_pre_enter(self):
         print("Screen1: on_pre_enter")
-        try:
-            #self.ids.screen1_label.text = 'Test Screen1!'
-            for i in range(20):
-                self.ids.scroll1.add_widget(
-                    OneLineListItem(text=f"Single-line item {i}")
-                )
+        # try:
+        #     #self.ids.screen1_label.text = 'Test Screen1!'
+        #     for i in range(20):
+        #         self.ids.scroll1.add_widget(
+        #             OneLineListItem(text=f"Single-line item {i}")
+        #         )
 
-        except:
-            print('Screen2: on_pre_enter: error')   
+        # except:
+        #     print('Screen2: on_pre_enter: error')   
 
     def on_enter(self):
         print("Screen1: on_enter")

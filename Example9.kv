@@ -1,0 +1,23 @@
+BoxLayout:
+    orientation: 'vertical'
+    
+    MDCard:
+        orientation: 'vertical'
+        size_hint: None, None
+        size: "200dp", "100dp"
+        pos_hint: {"center_x": 0.5}
+        md_bg_color: "#FFA500"
+        style: "outlined"
+ 
+        MDLabel:
+            text: "Test"
+            size_hint_y: None
+            bold: True
+            halign: 'left'  # Align the text to the left
+            valign: 'middle'  # Vertically center the text
+            height: self.texture_size[1]  # Set the label height based on text size
+            
+        MDIconButton:
+            icon: "dots-vertical"
+            pos_hint: {"top": 1, "right": 1}
+            on_release: app.card_click()       
