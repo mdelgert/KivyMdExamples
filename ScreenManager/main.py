@@ -7,6 +7,11 @@ from kivymd.uix.list import OneLineListItem
 from kivy.uix.screenmanager import NoTransition
 from kivy.clock import Clock
 
+Builder.load_file('master.kv')
+Builder.load_file('splash.kv')
+Builder.load_file('screen1.kv')
+Builder.load_file('screen2.kv')
+
 class Screen1(Screen):
     def on_pre_enter(self):
         print("Screen1: on_pre_enter")
@@ -48,34 +53,23 @@ class Splash(Screen):
         #self.ids.screen_manager.current = 'screen1'
         #self.root.screen_manager = 'screen1'
 
-class RootWidget(BoxLayout):
+class Master(BoxLayout):
     pass
 
 class MyApp(MDApp):
     def build(self):
         self.title = 'Screen Manager'
-
-        # Pre events works with this method
-        # sm = ScreenManager()
-        # sm.add_widget(Screen1(name='screen1'))
-        # sm.add_widget(Screen2(name='screen2'))
-        # return sm
-
-        # Pre events does not works with this method
-        layout = RootWidget()
-
-        return layout
+        self.root = Master()
+        self.screen_manager = self.root.ids.screen_manager
+        self.current_screen = "splash"
+        return self.root
 
     def on_start(self):
         print("on_start")
-        #self.root.screen_manager = 'screen1'
+        self.screen_manager.current = "screen1"
 
     def remove_splash(self, _):
         print("remove_splash")
 
 if __name__ == '__main__':
-    Builder.load_file('root.kv')
-    Builder.load_file('splash.kv')
-    Builder.load_file('screen1.kv')
-    Builder.load_file('screen2.kv')
     MyApp().run()
