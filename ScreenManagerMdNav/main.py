@@ -1,8 +1,9 @@
 # https://kivymd.readthedocs.io/en/latest/themes/theming/
+# https://kivy.org/doc/stable/api-kivy.uix.screenmanager.html
 
 from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.screenmanager import Screen, NoTransition
 from kivymd.app import MDApp
 from kivy.uix.popup import Popup
 
@@ -46,6 +47,7 @@ class MainApp(MDApp):
         self.root = Master()
         self.theme_cls.material_style = "M2"
         self.theme_cls.theme_style = "Dark"
+        self.root.ids.screen_manager.transition = NoTransition()
         return self.root
 
 MainApp().run()
