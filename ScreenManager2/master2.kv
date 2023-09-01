@@ -8,21 +8,19 @@
             Label:
                 text: "Header"
                 font_size: 20
-                
+
         ScreenManager:
             id: screen_manager
-            Splash:
-                name: "splash"            
             Screen1:
                 name: "screen1"
             Screen2:
                 name: "screen2"
             Screen3:
                 name: "screen3"
-            
+
         BoxLayout:
             size_hint_y: None
-            height: "40dp"
+            height: "50dp"
             Button:
                 text: "Screen 1"
                 on_release: screen_manager.current = "screen1"
