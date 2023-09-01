@@ -10,6 +10,8 @@ https://pictogrammers.com/library/mdi/
 pip install kivymd==1.1.1
 
 ### Examples
+https://github.com/mdelgert/Task-Manager-Kivy
+https://github.com/BekBrace/Task-Manager-Kivy.git
 https://github.com/MariyaSha/BinarytoDecimal.git
 https://github.com/attreyabhatt/KivyMD-Basics.git
 https://github.com/kivymd/KitchenSink.git
