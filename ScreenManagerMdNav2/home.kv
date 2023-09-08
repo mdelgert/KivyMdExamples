@@ -5,12 +5,13 @@
         MDLabel:
             text: "Home"
             theme_text_color: "Custom"
-            text_color: "white"
+            text_color: "black"
             font_style: "H3"
             halign: "center"
-            pos_hint: {"center_y": .95}
+            #pos_hint: {"center_y": .95}
         MDFillRoundFlatIconButton:
             icon: "language-python"
             text: "Question Screen"
             pos_hint: {"center_x": .5, "center_y": .15}
-            on_release: root.btn_question()
+            #on_release: root.btn_question()
+            on_release: app.change_screen('question')
