@@ -1,0 +1,74 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    MDTopAppBar:
+        title: "MDTopAppBar"
+
+    MDBottomNavigation:
+        panel_color: 1, 1, 1, 1
+
+        MDBottomNavigationItem:
+            name: 'screen_home'
+            text: 'Home'
+            icon: 'home'
+
+            HomeScreen:
+
+        MDBottomNavigationItem:
+            name: 'screen_about'
+            text: 'About'
+            icon: 'information'
+
+            AboutScreen:
+
+        MDBottomNavigationItem:
+            name: 'screen_question'
+            text: 'Question'
+            icon: 'help'
+
+            QuestionScreen:
+
+<HomeScreen>:
+    name: 'screen_home'
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(16)
+
+        MDLabel:
+            text: 'Welcome to the Home Screen'
+            theme_text_color: "Primary"
+            halign: 'center'
+            font_style: "H5"
+
+        MDRaisedButton:
+            text: "Go to Question"
+            on_release: root.open_question_screen()
+            size_hint_x: None
+            pos_hint: {'center_x': 0.5}  # Center the button horizontally
+
+<QuestionScreen>:
+    name: 'screen_question'
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(16)
+
+        MDLabel:
+            text: 'This is the Question Screen'
+            theme_text_color: "Primary"
+            halign: 'center'
+            font_style: "H5"
+
+<AboutScreen>:
+    name: 'screen_about'
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(16)
+
+        MDLabel:
+            text: 'This is the About Screen'
+            theme_text_color: "Primary"
+            halign: 'center'
+            font_style: "H5"
